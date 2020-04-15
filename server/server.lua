@@ -9,7 +9,7 @@ AddEventHandler('redemrp_clothing:Save', function(ubrania, price, cb)
         local charid = user.getSessionVar("charid")
         local currentMoney = user.getMoney()
         print (currentMoney)
-        if currentMoney >= _price then
+--[[        if currentMoney <= _price then--]]
             user.removeMoney(_price)
             TriggerEvent("redemrp_clothing:retrieveClothes", identifier, charid, function(call)
 
@@ -28,12 +28,12 @@ AddEventHandler('redemrp_clothing:Save', function(ubrania, price, cb)
                             end)
                     end
             end)
-        else
+--[[        else
             print("ZA MALO PIENIEDZY")
             TriggerClientEvent("redemrp_clothing:load2" , source)
             Wait(1000)
             TriggerClientEvent("redemrp_notification:start",source, "You do not have money" , 2, "error")
-        end
+        end--]]
 
 
     end)
