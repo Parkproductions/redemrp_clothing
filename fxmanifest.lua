@@ -18,6 +18,10 @@ files {
 	'html/bg.png',
 	'html/style.css',
 	'html/crock.ttf',
+	'html/gidole-regular.ttf',
+	'html/Hideout_Ghost_Condensed_Bold.otf',
+	'html/field_bg.jpg',
+	'html/border.png',
 }
 server_scripts {
 	'server/server.lua',
