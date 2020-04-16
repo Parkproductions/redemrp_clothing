@@ -51,8 +51,16 @@
 							var suwak11 = document.getElementById("test12");														
 							var wartosc = 1;	
 						
-						
-								
+						suwak.oninput = function() 
+							{
+		
+								wartosc = this.value;
+								component = "kapelusz";
+								/*document.getElementById('hat').innerHTML = this.value+"/586";*/
+								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
+								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
+								}
+
 						suwak2.oninput = function() 
 							{
 		
@@ -62,6 +70,7 @@
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
+								
 						suwak3.oninput = function() 
 								
 							{
