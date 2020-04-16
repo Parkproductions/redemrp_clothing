@@ -175,7 +175,7 @@
 			else if(hat == 586 && faces_val == 1){
 				new_hat = hat;
 			}
-			document.getElementById('hat').innerHTML = "Hat " +this.new_hat+"/586";
+			document.getElementById('hat').innerHTML = "Hat " +new_hat+"/586";
 			document.getElementById('test2').value = new_hat;
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_hat));
