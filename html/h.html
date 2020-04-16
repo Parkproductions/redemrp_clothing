@@ -58,7 +58,7 @@
 		
 								wartosc = this.value;
 								component = "koszula";
-								document.getElementById('shirt').innerHTML = "Shirt " +this.value+"/339";
+								/*document.getElementById('shirt').innerHTML = "Shirt " +this.value+"/339";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -68,7 +68,7 @@
 		
 								wartosc = this.value;
 								component = "kamizelka";
-								document.getElementById('vest').innerHTML = "Vest " +this.value+"/199";
+								/*document.getElementById('vest').innerHTML = "Vest " +this.value+"/199";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -78,7 +78,7 @@
 		
 								wartosc = this.value;
 								component = "spodnie";
-								document.getElementById('pants').innerHTML = "Pants " +this.value+"/328";
+								/*document.getElementById('pants').innerHTML = "Pants " +this.value+"/328";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -89,7 +89,7 @@
 		
 								wartosc = this.value;
 								component = "maska";
-								document.getElementById('mask').innerHTML = "Mask " +this.value+"/79";
+								/*document.getElementById('mask').innerHTML = "Mask " +this.value+"/79";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -101,7 +101,7 @@
 		
 								wartosc = this.value;
 								component = "buty";
-								document.getElementById('boots').innerHTML = "Boots " +this.value+"/426";
+								/*document.getElementById('boots').innerHTML = "Boots " +this.value+"/426";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -111,7 +111,7 @@
 		
 								wartosc = this.value;
 								component = "spodnica";
-								document.getElementById('skirt').innerHTML = "Skirt " +this.value+"/102";
+								/*document.getElementById('skirt').innerHTML = "Skirt " +this.value+"/102";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -121,7 +121,7 @@
 		
 								wartosc = this.value;
 								component = "plaszcz";
-								document.getElementById('coat').innerHTML = "Coat " +this.value+"/403";
+								/*document.getElementById('coat').innerHTML = "Coat " +this.value+"/403";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -132,7 +132,7 @@
 		
 								wartosc = this.value;
 								component = "rekawiczki";
-								document.getElementById('rekawiczki').innerHTML = "Gloves " +this.value+"/166";
+								/*document.getElementById('rekawiczki').innerHTML = "Gloves " +this.value+"/166";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -142,7 +142,7 @@
 		
 								wartosc = this.value;
 								component = "bandana";
-								document.getElementById('bandana').innerHTML = "Bandana " +this.value+"/258";
+								/*document.getElementById('bandana').innerHTML = "Bandana " +this.value+"/258";*/
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
@@ -175,7 +175,7 @@
 			else if(hat == 586 && faces_val == 1){
 				new_hat = hat;
 			}
-			document.getElementById('hat').innerHTML = "Hat " +new_hat+"/586";
+			
 			document.getElementById('test2').value = new_hat;
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_hat));
