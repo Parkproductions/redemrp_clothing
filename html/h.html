@@ -53,15 +53,7 @@
 						
 
 
-						suwak.oninput = function() 
-							{
-		
-								wartosc = this.value;
-								component = "kapelusz";
-								document.getElementById('hat').innerHTML = this.value+"/586";
-								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
-								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
-								}
+
 								
 						suwak2.oninput = function() 
 							{
@@ -175,6 +167,7 @@
 		
 		function changehat(btnval) {
 			var hat = document.getElementById('test2').value;
+
 			var component = "kapelusz";
 			var hat_val = btnval || 0;
 			var new_hat = parseInt(hat) + hat_val
@@ -186,9 +179,8 @@
 			}
 		
 			document.getElementById('test2').value = new_hat;
-			//console.log(face);
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
-			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(hat));
+			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_hat));
 		}
 		
 		function Save() {
