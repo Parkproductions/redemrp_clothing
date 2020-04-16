@@ -58,7 +58,7 @@
 		
 								wartosc = this.value;
 								component = "koszula";
-								document.getElementById('shirt').innerHTML = "Shirt "this.value+"/339";
+								document.getElementById('shirt').innerHTML = "Shirt " this.value+"/339";
 								$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 								$.post('http:/redemrp_clothing/zmiana', JSON.stringify(wartosc));
 								}
