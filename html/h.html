@@ -2,7 +2,7 @@
 <html>
 <head>
 	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 	
 	<link rel="stylesheet" href="style.css">
@@ -19,6 +19,8 @@
 </head>
 <body>
 	<script>
+		
+
 		var component = "kapelusz";
 		var sex = 1;
 		var item = 0;
@@ -48,7 +50,9 @@
 							var suwak10 = document.getElementById("test11");		
 							var suwak11 = document.getElementById("test12");														
 							var wartosc = 1;	
-	
+						
+
+
 						suwak.oninput = function() 
 							{
 		
@@ -169,6 +173,23 @@
 			}; 
 		});
 		
+		function changehat(btnval) {
+			var hat = document.getElementById('test2').value;
+			var component = "kapelusz";
+			var hat_val = btnval || 0;
+			var new_hat = parseInt(hat) + hat_val
+			if(hat == 1 && hat_val == -1){
+				new_hat = hat;
+			}
+			else if(hat == 586 && faces_val == 1){
+				new_hat = hat;
+			}
+		
+			document.getElementById('test2').value = new_hat;
+			//console.log(face);
+			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
+			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(hat));
+		}
 		
 		function Save() {
 			var kapelusz1 = document.getElementById('test2').value;
@@ -227,7 +248,7 @@ document.getElementById('bandana').innerHTML = item.bandana+"/258";
 		
 	</script>
 
-	<div id="mina">
+	<div id="mina" style="display:block">
 <div id="creator">
 <br>
 <div class="title heading-border">Clothes</div>
@@ -237,9 +258,9 @@ document.getElementById('bandana').innerHTML = item.bandana+"/258";
 			<label id="hat">Hat</label><br>
 		</div>
 		<div class="right_field">
-			<a id="" class="left " onclick=""><i class="fas fa-chevron-left"></i></a>
+			<a id="" class="left " onclick="changehat(- 1)"><i class="fas fa-chevron-left"></i></a>
 			<input type="text" name="points" min="1" max="586" value="1"class="slider" id="test2">
-			<a id="" class="right" onclick=""><i class="fas fa-chevron-right"></i></a>
+			<a id="" class="right" onclick="changehat(1)"><i class="fas fa-chevron-right"></i></a>
 		</div>
 	</div>
 	<div class="grubosc selector rdr2_field">
