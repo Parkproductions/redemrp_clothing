@@ -318,7 +318,7 @@
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_coat));
 		}		
 		function gloves(btnval) {
-			var gloves = document.getElementById('test10').value;
+			var gloves = document.getElementById('test11').value;
 
 			var component = "rekawiczki";
 			var gloves_val = btnval || 0;
@@ -330,7 +330,7 @@
 				new_gloves = gloves;
 			}
 		
-			document.getElementById('test10').value = new_gloves;
+			document.getElementById('test11').value = new_gloves;
 			console.log(new_gloves);
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_gloves));
@@ -379,7 +379,7 @@ document.getElementById("test10").value = item.plaszcz;
 document.getElementById("test11").value = item.rekawiczki;
 document.getElementById("test12").value = item.bandana;
 
-document.getElementById('hat').innerHTML = item.kapelusz+"/586";
+/*document.getElementById('hat').innerHTML = item.kapelusz+"/586";
 document.getElementById('shirt').innerHTML = item.koszula+"/339";
 document.getElementById('vest').innerHTML = item.kamizelka+"/199";
 document.getElementById('pants').innerHTML = item.spodnie+"/328";
@@ -388,7 +388,7 @@ document.getElementById('boots').innerHTML = item.buty+"/426";
 document.getElementById('skirt').innerHTML = item.spodnica+"/102";
 document.getElementById('coat').innerHTML = item.plaszcz+"/403";
 document.getElementById('rekawiczki').innerHTML = item.rekawiczki+"/166";
-document.getElementById('bandana').innerHTML = item.bandana+"/258";
+document.getElementById('bandana').innerHTML = item.bandana+"/258";*/
 
 }			  
 		
