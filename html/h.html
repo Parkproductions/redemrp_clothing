@@ -182,7 +182,7 @@
 			if(hat == 1 && hat_val == -1){
 				new_hat = hat;
 			}
-			else if(hat == 586 && faces_val == 1){
+			else if(hat == 586 && hat_val == 1){
 				new_hat = hat;
 			}
 		
@@ -190,6 +190,24 @@
 			console.log(new_hat);
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_hat));
+		}
+		function changeshirt(btnval) {
+			var shirt = document.getElementById('test2').value;
+
+			var component = "koszula";
+			var shirt_val = btnval || 0;
+			var new_shirt = parseInt(shirt) + shirt_val
+			if(shirt == 1 && shirt_val == -1){
+				new_shirt = shirt;
+			}
+			else if(shirt == 586 && shirt_val == 1){
+				new_shirt = shirt;
+			}
+		
+			document.getElementById('test3').value = new_shirt;
+			console.log(new_shirt);
+			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
+			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_shirt));
 		}
 		
 		function Save() {
