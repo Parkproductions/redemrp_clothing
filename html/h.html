@@ -227,6 +227,24 @@
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_vest));
 		}
+		function changepants(btnval) {
+			var pants = document.getElementById('test5').value;
+
+			var component = "koszula";
+			var pants_val = btnval || 0;
+			var new_pants = parseInt(pants) + pants_val
+			if(pants == 1 && pants_val == -1){
+				new_pants = pants;
+			}
+			else if(pants == 586 && pants_val == 1){
+				new_pants = pants;
+			}
+		
+			document.getElementById('test5').value = new_pants;
+			console.log(new_pants);
+			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
+			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_pants));
+		}
 		
 		function Save() {
 			var kapelusz1 = document.getElementById('test2').value;
