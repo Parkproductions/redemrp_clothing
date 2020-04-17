@@ -280,6 +280,42 @@
 			console.log(new_boots);
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_boots));
+		}
+		function changeskirt(btnval) {
+			var skirt = document.getElementById('test8').value;
+
+			var component = "spodnica";
+			var skirt_val = btnval || 0;
+			var new_skirt = parseInt(skirt) + skirt_val
+			if(skirt == 1 && skirt_val == -1){
+				new_skirt = skirt;
+			}
+			else if(skirt == 586 && skirt_val == 1){
+				new_skirt = skirt;
+			}
+		
+			document.getElementById('test8').value = new_skirt;
+			console.log(new_skirt);
+			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
+			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_skirt));
+		}
+		function changecoat(btnval) {
+			var coat = document.getElementById('test10').value;
+
+			var component = "spodnica";
+			var coat_val = btnval || 0;
+			var new_coat = parseInt(coat) + coat_val
+			if(coat == 1 && coat_val == -1){
+				new_coat = coat;
+			}
+			else if(coat == 586 && coat_val == 1){
+				new_coat = coat;
+			}
+		
+			document.getElementById('test10').value = new_coat;
+			console.log(new_coat);
+			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
+			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_coat));
 		}		
 		
 		function Save() {
@@ -381,9 +417,9 @@ document.getElementById('bandana').innerHTML = item.bandana+"/258";
 			<label id="coat">Coat</label><br>
 		</div>
 		<div class="right_field">
-			<a id="" class="left " onclick=""><i class="fas fa-chevron-left"></i></a>
+			<a id="" class="left " onclick="changecoat(- 1)"><i class="fas fa-chevron-left"></i></a>
 			<input type="text" name="points" min="1" max="403" value="1"class="slider" id="test10">
-			<a id="" class="right" onclick=""><i class="fas fa-chevron-right"></i></a>
+			<a id="" class="right" onclick="changecoat(1)"><i class="fas fa-chevron-right"></i></a>
 		</div>
 	</div>
 	<div class="grubosc selector rdr2_field">
@@ -444,9 +480,9 @@ document.getElementById('bandana').innerHTML = item.bandana+"/258";
 				<label id="skirt">Skirt</label><br>
 			</div>
 			<div class="right_field">
-				<a id="" class="left " onclick=""><i class="fas fa-chevron-left"></i></a>
+				<a id="" class="left " onclick="changeskirt(- 1)"><i class="fas fa-chevron-left"></i></a>
 				<input type="range" name="points" min="1" max="102" value="1"class="slider" id="test8">
-				<a id="" class="right" onclick=""><i class="fas fa-chevron-right"></i></a>
+				<a id="" class="right" onclick="changeskirt(1)"><i class="fas fa-chevron-right"></i></a>
 			</div>
 		</div>
 	</div>
