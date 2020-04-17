@@ -264,7 +264,7 @@
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_mask));
 		}
 		function changeboots(btnval) {
-			var boots = document.getElementById('test6').value;
+			var boots = document.getElementById('test7').value;
 
 			var component = "koszula";
 			var boots_val = btnval || 0;
@@ -276,7 +276,7 @@
 				new_boots = boots;
 			}
 		
-			document.getElementById('test6').value = new_boots;
+			document.getElementById('test7').value = new_boots;
 			console.log(new_boots);
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_boots));
@@ -411,9 +411,9 @@ document.getElementById('bandana').innerHTML = item.bandana+"/258";
 			<label id="boots">Boots</label><br>
 		</div>
 		<div class="right_field">
-			<a id="" class="left " onclick=""><i class="fas fa-chevron-left"></i></a>
+			<a id="" class="left " onclick="changebootsk(- 1)"><i class="fas fa-chevron-left"></i></a>
 			<input type="text" name="points" min="1" max="426" value="1"class="slider" id="test7">
-			<a id="" class="right" onclick=""><i class="fas fa-chevron-right"></i></a>
+			<a id="" class="right" onclick="changebootsk(1)"><i class="fas fa-chevron-right"></i></a>
 		</div>
 	</div>
 	<div class="grubosc selector rdr2_field">
