@@ -772,8 +772,7 @@ Citizen.CreateThread(function()
 		local coords = GetEntityCoords(playerPed)
 	for k,v in pairs(Config.Zones) do
 			if Vdist(coords, v) < 2 then
-                SetTextFont(0)
-				DrawTxt(Config.Shoptext, 0.50, 0.95, 0.6, 0.6, true, 255, 255, 255, 255, true, 10000)
+				DrawTxt(Config.Shoptext, 0.90, 0.95, 0.6, 0.6, true, 255, 255, 255, 255, true, 10000)
 				if IsControlJustReleased(0, Config.OpenKey) then
 					TriggerServerEvent("redemrp_clothing:loadClothes", 2, function(cb)
 								end)
