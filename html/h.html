@@ -335,6 +335,24 @@
 			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
 			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_gloves));
 		}	
+		function changebandana(btnval) {
+			var bandana = document.getElementById('test12').value;
+
+			var component = "bandana";
+			var bandana_val = btnval || 0;
+			var new_bandana = parseInt(bandana) + bandana_val
+			if(bandana == 1 && bandana_val == -1){
+				new_bandana = bandana;
+			}
+			else if(bandana == 586 && bandana_val == 1){
+				new_bandana = bandana;
+			}
+		
+			document.getElementById('test12').value = new_bandana;
+			console.log(new_bandana);
+			$.post('http:/redemrp_clothing/komponent', JSON.stringify(component));
+			$.post('http:/redemrp_clothing/zmiana', JSON.stringify(new_bandana));
+		}	
 
 		
 		function Save() {
